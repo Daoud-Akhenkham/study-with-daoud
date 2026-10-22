@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study With Daoud</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #172033;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+      padding: 25px 8%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #2563eb;
+      padding: 14px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 8%;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .card h3 {
+      color: #2563eb;
+      margin-bottom: 12px;
+      font-size: 23px;
+    }
+
+    .card p {
+      color: #667085;
+      margin-bottom: 18px;
+    }
+
+    .card button {
+      border: none;
+      background: #2563eb;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .subjects {
+      background: #eef2ff;
+    }
+
+    footer {
+      background: #172033;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">📚 Study With Daoud</div>
+
+      <div>
+        <a href="#home">Accueil</a>
+        <a href="#levels">Niveaux</a>
+        <a href="#subjects">Matières</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <h1>Study With Daoud 🚀</h1>
+
+      <p>
+        Apprends, révise et entraîne-toi pour réussir tes études.
+      </p>
+
+      <a class="btn" href="#levels">Commencer</a>
+    </section>
+
+    <section id="levels">
+      <h2>🎓 Tous les niveaux</h2>
+
+      <div class="levels">
+
+        <div class="card">
+          <h3>Primaire</h3>
+          <p>Cours et exercices pour les élèves du primaire.</p>
+          <button onclick="showMessage('Primaire')">Entrer</button>
+        </div>
+
+        <div class="card">
+          <h3>Collège</h3>
+          <p>Révisions et exercices pour le collège.</p>
+          <button onclick="showMessage('Collège')">Entrer</button>
+        </div>
+
+        <div class="card">
+          <h3>Lycée</h3>
+          <p>Cours, exercices et préparation aux examens.</p>
+          <button onclick="showMessage('Lycée')">Entrer</button>
+        </div>
+
+        <div class="card">
+          <h3>Université</h3>
+          <p>Ressources pour les étudiants universitaires.</p>
+          <button onclick="showMessage('Université')">Entrer</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="subjects" id="subjects">
+      <h2>📚 Matières</h2>
+
+      <div class="levels">
+
+        <div class="card">
+          <h3>🧮 Mathématiques</h3>
+          <p>Formules, cours et exercices.</p>
+          <button onclick="showMessage('Mathématiques')">Voir</button>
+        </div>
+
+        <div class="card">
+          <h3>🔬 Sciences</h3>
+          <p>Sciences physiques et sciences de la vie.</p>
+          <button onclick="showMessage('Sciences')">Voir</button>
+        </div>
+
+        <div class="card">
+          <h3>🇫🇷 Français</h3>
+          <p>Grammaire, conjugaison et compréhension.</p>
+          <button onclick="showMessage('Français')">Voir</button>
+        </div>
+
+        <div class="card">
+          <h3>🇬🇧 Anglais</h3>
+          <p>Vocabulaire, grammaire et exercices.</p>
+          <button onclick="showMessage('Anglais')">Voir</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Study With Daoud — Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function showMessage(name) {
+      alert("Bienvenue dans la section " + name + " !");
+    }
+  </script>
+
+</body>
+</html>
